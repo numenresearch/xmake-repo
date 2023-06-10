@@ -24,7 +24,8 @@ package("cpr")
 
     on_load(function (package)
         if package:config("ssl") then
-            package:add("deps", "libcurl", {configs = {libssh2 = true, zlib = true}})
+            package:add("deps", "libcurl", {configs = {libssh2 = false, zlib = true}})
+            -- package:add("deps", "libcurl", {configs = {libssh2 = true, zlib = true}})
             -- package:add("deps", "libssh2")
         else
             package:add("deps", "libcurl")
