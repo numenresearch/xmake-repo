@@ -48,8 +48,9 @@ package("libcurl")
                             libpsl   = "libpsl",
                             zlib     = "zlib",
                             zstd     = "zstd",
-                            brotli   = "brotli",
-                            libssh2  = "libssh2"}
+                            brotli   = "brotli"--,
+                            -- libssh2  = "libssh2"
+							}
         local has_deps = false
         for name, dep in pairs(configdeps) do
             if package:config(name) then
@@ -119,7 +120,8 @@ package("libcurl")
         if package:is_plat("macosx", "iphoneos") then
             table.insert(configs, (package:version():ge("7.77") and "--with-secure-transport" or "--with-darwinssl"))
         end
-        for _, name in ipairs({"openssl", "mbedtls", "zlib", "brotli", "zstd", "libssh2", "libidn2", "libpsl", "nghttp2"}) do
+        -- for _, name in ipairs({"openssl", "mbedtls", "zlib", "brotli", "zstd", "libssh2", "libidn2", "libpsl", "nghttp2"}) do
+		for _, name in ipairs({"openssl", "mbedtls", "zlib", "brotli", "zstd", "libidn2", "libpsl", "nghttp2"}) do
             table.insert(configs, package:config(name) and "--with-" .. name or "--without-" .. name)
         end
         table.insert(configs, package:config("cares") and "--enable-ares" or "--disable-ares")
