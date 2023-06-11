@@ -3,7 +3,7 @@ package("cpp-httplib")
     set_homepage("https://github.com/yhirose/cpp-httplib")
     set_description("A C++11 single-file header-only cross platform HTTP/HTTPS library.")
 
-    set_urls("https://codeload.github.com/yhirose/cpp-httplib/zip/refs/tags/v$(version)",
+    set_urls("https://github.com/yhirose/cpp-httplib/archive/refs/tags/v$(version).zip",
         "https://github.com/yhirose/cpp-httplib/archive/v$(version).zip",
         "https://github.com/yhirose/cpp-httplib.git")
     add_versions("0.8.5", "57d2a7e67ae6944292cd08cb16083463a93c7c139f6698560e872ade63b9b463")
