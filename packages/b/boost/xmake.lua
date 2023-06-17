@@ -68,7 +68,9 @@ package("boost")
                       "nowide",
                       "python",
                       "stacktrace",
-                      "type_erasure"}
+                      "type_erasure",
+                      "url"
+                    }
 
     add_configs("all",          { description = "Enable all library modules support.",  default = false, type = "boolean"})
     add_configs("multi",        { description = "Enable multi-thread support.",  default = true, type = "boolean"})
