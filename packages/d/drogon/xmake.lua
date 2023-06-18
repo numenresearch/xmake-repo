@@ -14,6 +14,7 @@ package("drogon")
     add_versions("v1.8.0", "bc6503cf213ed961d4a5e9fd7cb8e75b6b11045a67840ea2241e57321dd8711b")
     add_versions("v1.8.1", "9665f001355cc72a5a9db941ae349cec50959d18bf44eb6c09311bf9c78336a4")
     add_versions("v1.8.2", "1182cab00c33e400eac617c6dbf44fa2f358e1844990b6b8c5c87783024f9971")
+    add_versions("v1.8.4", "6f2f59ead0f0c37b0aac4bc889cbaedf3c2540f3020e892596c72f0a4d887a18")
 
     add_patches("1.4.1", path.join(os.scriptdir(), "patches", "1.4.1", "trantor.patch"), "7f9034a27bb63de8dedb80dd9f246ea7aa7724c87f2c0d0054f4b6097ea2a862")
     add_patches("1.4.1", path.join(os.scriptdir(), "patches", "1.4.1", "resolv.patch" ), "a1054822bf91f5f06de8bca9b1bd8859233228159a8ff8014ce6329d6c000f26")
